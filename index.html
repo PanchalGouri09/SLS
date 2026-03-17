@@ -175,7 +175,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.9rem 3rem;display:
 /* PLATFORMS */
 #platforms{background:var(--surface);}
 .plist{display:flex;flex-direction:column;gap:1.5px;margin-top:2rem;}
-.pr{background:var(--card);display:grid;grid-template-columns:66px 190px 1fr auto;gap:1.8rem;padding:2rem 2.2rem;align-items:start;transition:background .25s;}
+ .pr{
+  background:var(--card);
+  display:grid;
+  grid-template-columns:66px 1fr;
+  gap:1rem;
+  padding:1.5rem;
+}gap:1.8rem;padding:2rem 2.2rem;align-items:start;transition:background .25s;}
 .pr:hover{background:var(--card2);}
 .pr-ic{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
 .pr-n{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--text);margin-bottom:.18rem;letter-spacing:-.01em;}
@@ -305,7 +311,16 @@ footer span{font-family:'DM Mono',monospace;font-size:.57rem;letter-spacing:.15e
 .pfacts{grid-template-columns:1fr;}.wgrid{grid-template-columns:1fr;}
 .fgrid{grid-template-columns:1fr 1fr;}.cl-tks{grid-template-columns:1fr;}
 .sgrid{grid-template-columns:1fr;}.pr{grid-template-columns:50px 1fr;}.pr-sigs{display:none;}
-.si{padding:3.5rem 1.5rem;}}
+.si{padding:3.5rem 1.5rem;}
+.pr{
+  grid-template-columns:1fr !important;
+}
+
+.pr-d{
+  width:100%;
+  line-height:1.6;
+  word-break:normal;
+}}
 @media(max-width:600px){.mrow,.dg6,.acmp,.fgrid{grid-template-columns:1fr;}.sband{grid-template-columns:repeat(2,1fr);}}
 /* ================= MOBILE TEXT FIX ================= */
 
@@ -333,40 +348,11 @@ body, p, div, span, h1, h2, h3 {
 .kf {
   letter-spacing: normal !important;
 }
-
-/* Mobile optimization */
-@media (max-width: 600px) {
-
-  body {
-    font-size: 14px;
-  }
-
-  .htitle {
-    font-size: clamp(2rem, 8vw, 3rem);
-    line-height: 1.2;
-  }
-
-  .sh {
-    line-height: 1.2;
-  }
-
-  .sbo,
-  .dbod,
-  .mc-b,
-  .dc-b,
-  .pr-d,
-  .pyc-b {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-
-  /* Extra safety fix */
-  * {
-    word-break: break-word;
-  }
+.pr-d{
+  max-width:100%;
+  overflow-wrap:break-word;
+  word-break:normal;
 }
-
-/* ================= END FIX ================= */
 </style>
 </head>
 <body>
